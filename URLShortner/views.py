@@ -11,10 +11,9 @@ class Shortener(ListAPIView):
     queryset = URLLink.objects.all()
     serializer_class = URLSerializer
 
+# To create the short url
 class ShortenerCreate(CreateAPIView):
-    
     serializer_class = URLSerializer
-    print(serializer_class)
 
 # To redirect the original page with new url
 class Redirector(View):
